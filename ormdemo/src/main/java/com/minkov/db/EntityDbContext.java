@@ -90,41 +90,16 @@ public class EntityDbContext<T> implements DbContext<T> {
                 .execute();
     }
 
-    private boolean update(T entity) throws SQLException, IllegalAccessException {
-        // UPDATE {0} {1} WHERE {2}={3}
-        // {1} -> SET {0}={1},SET {0}={1}
-
-        List<String> updateQueries =
-                getColumnFields().stream()
-                        .map(field -> {
-                            field.setAccessible(true);
-                            try {
-                                String columnName = field.getAnnotation(Column.class)
-                                        .name();
-                                Object value = field.get(entity);
-                                if (value instanceof String) {
-                                    value = "\'" + value + "\'";
-                                }
-
-                                return MessageFormat.format(
-                                        SET_QUERY_TEMPLATE,
-                                        columnName,
-                                        value
-                                );
-                            } catch (IllegalAccessException e) {
-                                e.printStackTrace();
-                            }
-                            return null;
-                        })
-                        .collect(Collectors.toList());
+    private boolean update(final T entity) throws SQLException, IllegalAccessException {
+        List<String> updateQueries = getColumnFields().stream()
+                .map(field -> toSetSubquery(field, entity))
+                .collect(Collectors.toList());
 
         String updateQueriesString = String.join(", ", updateQueries);
 
         Field primaryKey = getPrimaryKeyField();
         primaryKey.setAccessible(true);
-        String primaryKeyName =
-                primaryKey.getAnnotation(PrimaryKey.class)
-                        .name();
+        String primaryKeyName = getPrimaryKeyColumnName();
 
         long primaryKeyValue =
                 (long) primaryKey
@@ -140,6 +115,33 @@ public class EntityDbContext<T> implements DbContext<T> {
 
         return connection.prepareStatement(queryString)
                 .execute();
+    }
+
+    private String getPrimaryKeyColumnName() {
+        return getPrimaryKeyField()
+                .getAnnotation(PrimaryKey.class)
+                .name();
+    }
+
+    private String toSetSubquery(Field field, T entity) {
+        field.setAccessible(true);
+        try {
+            String columnName = field.getAnnotation(Column.class)
+                    .name();
+            Object value = field.get(entity);
+            if (value instanceof String) {
+                value = "\'" + value + "\'";
+            }
+
+            return MessageFormat.format(
+                    SET_QUERY_TEMPLATE,
+                    columnName,
+                    value
+            );
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     public List<T> find() throws SQLException, IllegalAccessException, InstantiationException {

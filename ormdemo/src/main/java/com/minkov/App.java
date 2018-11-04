@@ -13,6 +13,7 @@ public class App {
             "jdbc:mysql://localhost:3306/soft_uni_simple";
 
     public static void main(String[] args) throws SQLException, IllegalAccessException, InstantiationException, NoSuchFieldException {
+	    System.out.println("Hello from VIM");
         Connection connection = getConnection();
 
         DbContext<User> usersDbContext =
