@@ -2,11 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="835defbc-a4d0-4b4d-bae8-4e36fea8d99c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../hibernate-jpa-jdbc/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hibernate-jpa-jdbc/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hibernate-jpa-jdbc/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hibernate-jpa-jdbc/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hibernate-jpa-jdbc/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entities/Department.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entities/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entities/Mother.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entities/Project.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/ToStringExtensions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7babc907-54d2-4f00-a96c-764afc5ea864.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7babc907-54d2-4f00-a96c-764afc5ea864.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Teacher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entities/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entities/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entities/Teacher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entities/Teacher.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -57,42 +67,46 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Person" value="4" />
-          <entry key="SCHEMA:soft_uni" value="4" />
+          <entry key="SCHEMA:soft_uni" value="8" />
           <entry key="class" value="1" />
+          <entry key="departments" value="1" />
+          <entry key="employee" value="2" />
           <entry key="hibernate_sequence" value="1" />
           <entry key="iml" value="1" />
-          <entry key="java" value="6" />
+          <entry key="java" value="19" />
+          <entry key="mothers" value="2" />
           <entry key="people" value="2" />
+          <entry key="projects_employees" value="1" />
           <entry key="sql" value="1" />
-          <entry key="students" value="2" />
-          <entry key="teachers" value="2" />
+          <entry key="students" value="3" />
+          <entry key="teachers" value="3" />
           <entry key="xm" value="1" />
-          <entry key="xml" value="2" />
+          <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="Database Element" value="10" />
+          <entry key="Database Element" value="18" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="6" />
+          <entry key="JAVA" value="19" />
           <entry key="Scratch" value="1" />
-          <entry key="UML" value="5" />
-          <entry key="XML" value="3" />
+          <entry key="UML" value="9" />
+          <entry key="XML" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1266" />
+          <entry key="java" value="3575" />
           <entry key="txt" value="8" />
-          <entry key="xml" value="27" />
+          <entry key="xml" value="33" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1266" />
+          <entry key="JAVA" value="3575" />
           <entry key="PLAIN_TEXT" value="8" />
-          <entry key="XML" value="27" />
+          <entry key="XML" value="33" />
         </counts>
       </usages-collector>
     </session>
@@ -100,10 +114,56 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/entities/Employee.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="226">
+              <caret line="41" column="16" lean-forward="true" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#729#730#0" expanded="true" />
+                <element signature="e#762#763#0" expanded="true" />
+                <element signature="e#734#735#0" expanded="true" />
+                <element signature="e#778#779#0" expanded="true" />
+                <element signature="e#905#906#0" expanded="true" />
+                <element signature="e#936#937#0" expanded="true" />
+                <element signature="e#990#991#0" expanded="true" />
+                <element signature="e#1030#1031#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/entities/Project.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="111">
+              <caret line="39" column="15" lean-forward="true" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#235#236#0" expanded="true" />
+                <element signature="e#260#261#0" expanded="true" />
+                <element signature="e#147#148#0" expanded="true" />
+                <element signature="e#172#173#0" expanded="true" />
+                <element signature="e#205#206#0" expanded="true" />
+                <element signature="e#233#234#0" expanded="true" />
+                <element signature="e#289#290#0" expanded="true" />
+                <element signature="e#316#317#0" expanded="true" />
+                <element signature="e#356#357#0" expanded="true" />
+                <element signature="e#388#389#0" expanded="true" />
+                <element signature="e#557#558#0" expanded="true" />
+                <element signature="e#589#590#0" expanded="true" />
+                <element signature="e#646#647#0" expanded="true" />
+                <element signature="e#688#689#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="1036">
+              <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -112,19 +172,29 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2.jar!/javax/persistence/EntityManager.class">
+        <entry file="file://$PROJECT_DIR$/src/main/java/entities/Department.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="106" column="20" selection-start-line="106" selection-start-column="20" selection-end-line="106" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
-              <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+            <state relative-caret-position="318">
+              <caret line="41" column="21" lean-forward="true" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#270#271#0" expanded="true" />
+                <element signature="e#299#300#0" expanded="true" />
+                <element signature="e#386#387#0" expanded="true" />
+                <element signature="e#411#412#0" expanded="true" />
+                <element signature="e#444#445#0" expanded="true" />
+                <element signature="e#472#473#0" expanded="true" />
+                <element signature="e#515#516#0" expanded="true" />
+                <element signature="e#542#543#0" expanded="true" />
+                <element signature="e#582#583#0" expanded="true" />
+                <element signature="e#614#615#0" expanded="true" />
+                <element signature="e#728#729#0" expanded="true" />
+                <element signature="e#760#761#0" expanded="true" />
+                <element signature="e#817#818#0" expanded="true" />
+                <element signature="e#859#860#0" expanded="true" />
+                <element signature="e#974#975#0" expanded="true" />
+                <element signature="e#1022#1023#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -132,65 +202,36 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/entities/Person.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-              <folding>
-                <element signature="e#373#374#0" expanded="true" />
-                <element signature="e#398#399#0" expanded="true" />
-                <element signature="e#86#87#0" expanded="true" />
-                <element signature="e#111#112#0" expanded="true" />
-                <element signature="e#144#145#0" expanded="true" />
-                <element signature="e#172#173#0" expanded="true" />
-                <element signature="e#720#721#0" expanded="true" />
-                <element signature="e#747#748#0" expanded="true" />
-                <element signature="e#787#788#0" expanded="true" />
-                <element signature="e#819#820#0" expanded="true" />
-                <element signature="e#723#724#0" expanded="true" />
-                <element signature="e#749#750#0" expanded="true" />
-                <element signature="e#784#785#0" expanded="true" />
-                <element signature="e#814#815#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://7babc907-54d2-4f00-a96c-764afc5ea864/schema/soft_uni/table/people">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/entities/Student.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
-              <folding>
-                <element signature="e#306#307#0" expanded="true" />
-                <element signature="e#329#330#0" expanded="true" />
-                <element signature="e#471#472#0" expanded="true" />
-                <element signature="e#499#500#0" expanded="true" />
-                <element signature="e#538#539#0" expanded="true" />
-                <element signature="e#572#573#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/entities/Teacher.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+            <state relative-caret-position="99">
+              <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#568#569#0" expanded="true" />
-                <element signature="e#599#600#0" expanded="true" />
-                <element signature="e#644#645#0" expanded="true" />
-                <element signature="e#677#678#0" expanded="true" />
+                <element signature="e#688#689#0" expanded="true" />
+                <element signature="e#720#721#0" expanded="true" />
+                <element signature="e#910#911#0" expanded="true" />
+                <element signature="e#939#940#0" expanded="true" />
+                <element signature="e#983#984#0" expanded="true" />
+                <element signature="e#1019#1020#0" expanded="true" />
+                <element signature="e#1203#1204#0" expanded="true" />
+                <element signature="e#1236#1237#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/entities/Mother.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="287">
+              <caret line="20" column="28" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#276#277#0" expanded="true" />
+                <element signature="e#299#300#0" expanded="true" />
+                <element signature="e#172#173#0" expanded="true" />
+                <element signature="e#200#201#0" expanded="true" />
+                <element signature="e#242#243#0" expanded="true" />
+                <element signature="e#276#277#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -212,12 +253,17 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/resources/persistence.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/App.java" />
-        <option value="$PROJECT_DIR$/src/main/java/entities/Person.java" />
         <option value="$PROJECT_DIR$/src/main/java/entities/Student.java" />
         <option value="$PROJECT_DIR$/src/main/java/entities/Teacher.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/entities/Mother.java" />
+        <option value="$PROJECT_DIR$/src/main/java/entities/Person.java" />
+        <option value="$PROJECT_DIR$/src/main/java/entities/Department.java" />
+        <option value="$PROJECT_DIR$/src/main/java/utils/ToStringExtensions.java" />
+        <option value="$PROJECT_DIR$/src/main/java/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/entities/Employee.java" />
+        <option value="$PROJECT_DIR$/src/main/java/entities/Project.java" />
       </list>
     </option>
   </component>
@@ -233,6 +279,17 @@
         <option name="importAutomatically" value="true" />
       </MavenImportingSettings>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="inheritanceandrelationsdemo" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="29" />
@@ -305,7 +362,7 @@
     <property name="DatabaseDriversLRU" value="mariadb" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541438702736" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541444631637" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -346,12 +403,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1541432965521</updated>
-      <workItem from="1541432969217" duration="5249000" />
+      <workItem from="1541432969217" duration="11108000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5249000" />
+    <option name="totallyTimeSpent" value="11108000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="29" width="1920" height="1020" extended-state="6" />
@@ -363,7 +420,7 @@
       <window_info id="UI Designer" />
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Capture Tool" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.2497332" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2497332" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Console" weight="0.3295325" />
       <window_info anchor="bottom" id="Terminal" />
@@ -382,19 +439,64 @@
       <window_info anchor="right" id="Palette" />
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="right" id="Database" weight="0.24226254" />
-      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="right" id="Maven Projects" weight="0.32977587" />
       <window_info anchor="right" id="Palette&#9;" />
       <window_info anchor="right" id="Theme Preview" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Persistence" order="0" side_tool="true" />
+      <window_info id="Designer" order="1" />
+      <window_info id="UI Designer" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="Image Layers" order="5" />
+      <window_info content_ui="combo" id="Project" order="6" weight="0.2497332" />
+      <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Database Console" order="0" weight="0.3295325" />
+      <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="3" weight="0.3295325" />
+      <window_info anchor="bottom" id="Java Enterprise" order="4" />
+      <window_info anchor="bottom" id="Database Changes" order="5" />
+      <window_info anchor="bottom" id="Version Control" order="6" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="7" />
+      <window_info anchor="bottom" id="Find" order="8" />
+      <window_info anchor="bottom" id="Run" order="9" weight="0.7297605" />
+      <window_info anchor="bottom" id="Debug" order="10" weight="0.3990878" />
+      <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="13" />
+      <window_info anchor="right" id="Palette" order="0" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Maven Projects" order="2" />
+      <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.24226254" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/App.java</url>
+          <line>29</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/inheritanceandrelationsdemo.iml">
@@ -414,31 +516,10 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7babc907-54d2-4f00-a96c-764afc5ea864/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://7babc907-54d2-4f00-a96c-764afc5ea864/schema/soft_uni/table/teachers">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://7babc907-54d2-4f00-a96c-764afc5ea864/schema/soft_uni/table/students">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -449,47 +530,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="uml://DATABASE/7babc907-54d2-4f00-a96c-764afc5ea864.SCHEMA:soft_uni">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>7babc907-54d2-4f00-a96c-764afc5ea864.SCHEMA:soft_uni</OriginalElement>
-          <nodes>
-            <node x="" y="">7babc907-54d2-4f00-a96c-764afc5ea864.TABLE:soft_uni.hibernate_sequence</node>
-            <node x="" y="">7babc907-54d2-4f00-a96c-764afc5ea864.TABLE:soft_uni.people</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.991803278688526" x="73.94650205761292" y="185.8436213991768" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Key columns</Category>
-            <Category>Columns</Category>
-          </Categories>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://7babc907-54d2-4f00-a96c-764afc5ea864/schema/soft_uni/table/people">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2.jar!/javax/persistence/EntityManager.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="106" column="20" selection-start-line="106" selection-start-column="20" selection-end-line="106" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -512,54 +556,258 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Person.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2.jar!/javax/persistence/EntityManager.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+        <state relative-caret-position="280">
+          <caret line="106" column="20" selection-start-line="106" selection-start-column="20" selection-end-line="106" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Teacher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="6" column="21" selection-end-line="27" />
           <folding>
-            <element signature="e#373#374#0" expanded="true" />
-            <element signature="e#398#399#0" expanded="true" />
-            <element signature="e#86#87#0" expanded="true" />
-            <element signature="e#111#112#0" expanded="true" />
-            <element signature="e#144#145#0" expanded="true" />
-            <element signature="e#172#173#0" expanded="true" />
-            <element signature="e#720#721#0" expanded="true" />
-            <element signature="e#747#748#0" expanded="true" />
-            <element signature="e#787#788#0" expanded="true" />
-            <element signature="e#819#820#0" expanded="true" />
-            <element signature="e#723#724#0" expanded="true" />
-            <element signature="e#749#750#0" expanded="true" />
-            <element signature="e#784#785#0" expanded="true" />
-            <element signature="e#814#815#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/entities/Student.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="346">
+          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://7babc907-54d2-4f00-a96c-764afc5ea864/schema/soft_uni/table/mothers">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Mother.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="20" column="28" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="28" />
           <folding>
-            <element signature="e#306#307#0" expanded="true" />
-            <element signature="e#329#330#0" expanded="true" />
-            <element signature="e#471#472#0" expanded="true" />
-            <element signature="e#499#500#0" expanded="true" />
-            <element signature="e#538#539#0" expanded="true" />
-            <element signature="e#572#573#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#276#277#0" expanded="true" />
+            <element signature="e#299#300#0" expanded="true" />
+            <element signature="e#172#173#0" expanded="true" />
+            <element signature="e#200#201#0" expanded="true" />
+            <element signature="e#242#243#0" expanded="true" />
+            <element signature="e#276#277#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Teacher.java">
+    <entry file="das://7babc907-54d2-4f00-a96c-764afc5ea864/schema/soft_uni/table/students">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://7babc907-54d2-4f00-a96c-764afc5ea864/schema/soft_uni/table/teachers">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://7babc907-54d2-4f00-a96c-764afc5ea864/schema/soft_uni/table/departments">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-11-jdk/lib/src.zip!/java.base/java/lang/Runnable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+        <state relative-caret-position="600">
+          <caret line="67" column="22" lean-forward="true" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://7babc907-54d2-4f00-a96c-764afc5ea864/schema/soft_uni/table/employee">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/ToStringExtensions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#568#569#0" expanded="true" />
-            <element signature="e#599#600#0" expanded="true" />
-            <element signature="e#644#645#0" expanded="true" />
-            <element signature="e#677#678#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Department.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="41" column="21" lean-forward="true" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#270#271#0" expanded="true" />
+            <element signature="e#299#300#0" expanded="true" />
+            <element signature="e#386#387#0" expanded="true" />
+            <element signature="e#411#412#0" expanded="true" />
+            <element signature="e#444#445#0" expanded="true" />
+            <element signature="e#472#473#0" expanded="true" />
+            <element signature="e#515#516#0" expanded="true" />
+            <element signature="e#542#543#0" expanded="true" />
+            <element signature="e#582#583#0" expanded="true" />
+            <element signature="e#614#615#0" expanded="true" />
+            <element signature="e#728#729#0" expanded="true" />
+            <element signature="e#760#761#0" expanded="true" />
+            <element signature="e#817#818#0" expanded="true" />
+            <element signature="e#859#860#0" expanded="true" />
+            <element signature="e#974#975#0" expanded="true" />
+            <element signature="e#1022#1023#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#688#689#0" expanded="true" />
+            <element signature="e#720#721#0" expanded="true" />
+            <element signature="e#910#911#0" expanded="true" />
+            <element signature="e#939#940#0" expanded="true" />
+            <element signature="e#983#984#0" expanded="true" />
+            <element signature="e#1019#1020#0" expanded="true" />
+            <element signature="e#1203#1204#0" expanded="true" />
+            <element signature="e#1236#1237#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/7babc907-54d2-4f00-a96c-764afc5ea864.SCHEMA:soft_uni">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>7babc907-54d2-4f00-a96c-764afc5ea864.SCHEMA:soft_uni</OriginalElement>
+          <nodes>
+            <node x="0.0" y="171.5">7babc907-54d2-4f00-a96c-764afc5ea864.TABLE:soft_uni.projects</node>
+            <node x="123.54999999999998" y="342.99999999999994">7babc907-54d2-4f00-a96c-764afc5ea864.TABLE:soft_uni.projects_employees</node>
+            <node x="0.0" y="471.0">7babc907-54d2-4f00-a96c-764afc5ea864.TABLE:soft_uni.teachers</node>
+            <node x="253.0" y="471.0">7babc907-54d2-4f00-a96c-764afc5ea864.TABLE:soft_uni.students</node>
+            <node x="472.0" y="471.0">7babc907-54d2-4f00-a96c-764afc5ea864.TABLE:soft_uni.mothers</node>
+            <node x="0.0" y="650.0">7babc907-54d2-4f00-a96c-764afc5ea864.TABLE:soft_uni.hibernate_sequence</node>
+            <node x="324.5" y="0.0">7babc907-54d2-4f00-a96c-764afc5ea864.TABLE:soft_uni.departments</node>
+            <node x="425.0" y="134.0">7babc907-54d2-4f00-a96c-764afc5ea864.TABLE:soft_uni.employee</node>
+            <node x="201.0" y="134.0">7babc907-54d2-4f00-a96c-764afc5ea864.TABLE:soft_uni.employees</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="7babc907-54d2-4f00-a96c-764afc5ea864.TABLE:soft_uni.employee" target="7babc907-54d2-4f00-a96c-764afc5ea864.TABLE:soft_uni.departments">
+              <point x="0.0" y="-79.5" />
+              <point x="527.0" y="109.0" />
+              <point x="460.25" y="109.0" />
+              <point x="45.25000000000003" y="42.0" />
+            </edge>
+            <edge source="7babc907-54d2-4f00-a96c-764afc5ea864.TABLE:soft_uni.projects_employees" target="7babc907-54d2-4f00-a96c-764afc5ea864.TABLE:soft_uni.employees">
+              <point x="47.0" y="-41.5" />
+              <point x="243.75" y="318.0" />
+              <point x="303.0" y="318.0" />
+              <point x="0.0" y="79.5" />
+            </edge>
+            <edge source="7babc907-54d2-4f00-a96c-764afc5ea864.TABLE:soft_uni.projects_employees" target="7babc907-54d2-4f00-a96c-764afc5ea864.TABLE:soft_uni.projects">
+              <point x="-47.0" y="-41.5" />
+              <point x="149.75" y="318.0" />
+              <point x="90.5" y="318.0" />
+              <point x="0.0" y="42.0" />
+            </edge>
+            <edge source="7babc907-54d2-4f00-a96c-764afc5ea864.TABLE:soft_uni.employees" target="7babc907-54d2-4f00-a96c-764afc5ea864.TABLE:soft_uni.departments">
+              <point x="0.0" y="-79.5" />
+              <point x="303.0" y="109.0" />
+              <point x="369.75" y="109.0" />
+              <point x="-45.25" y="42.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="2.500000000000001" x="152.80000000000027" y="199.66666666666666" />
+          <SelectedNodes>
+            <node>7babc907-54d2-4f00-a96c-764afc5ea864.TABLE:soft_uni.projects_employees</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://7babc907-54d2-4f00-a96c-764afc5ea864/schema/soft_uni/table/projects_employees">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Employee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="41" column="16" lean-forward="true" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#729#730#0" expanded="true" />
+            <element signature="e#762#763#0" expanded="true" />
+            <element signature="e#734#735#0" expanded="true" />
+            <element signature="e#778#779#0" expanded="true" />
+            <element signature="e#905#906#0" expanded="true" />
+            <element signature="e#936#937#0" expanded="true" />
+            <element signature="e#990#991#0" expanded="true" />
+            <element signature="e#1030#1031#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1036">
+          <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Project.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="39" column="15" lean-forward="true" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#235#236#0" expanded="true" />
+            <element signature="e#260#261#0" expanded="true" />
+            <element signature="e#147#148#0" expanded="true" />
+            <element signature="e#172#173#0" expanded="true" />
+            <element signature="e#205#206#0" expanded="true" />
+            <element signature="e#233#234#0" expanded="true" />
+            <element signature="e#289#290#0" expanded="true" />
+            <element signature="e#316#317#0" expanded="true" />
+            <element signature="e#356#357#0" expanded="true" />
+            <element signature="e#388#389#0" expanded="true" />
+            <element signature="e#557#558#0" expanded="true" />
+            <element signature="e#589#590#0" expanded="true" />
+            <element signature="e#646#647#0" expanded="true" />
+            <element signature="e#688#689#0" expanded="true" />
           </folding>
         </state>
       </provider>

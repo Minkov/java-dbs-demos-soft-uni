@@ -1,14 +1,13 @@
+import entities.Department;
+import entities.Employee;
 import entities.Person;
-import entities.Student;
-import entities.Teacher;
+import entities.Project;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import javax.persistence.Query;
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import java.util.Arrays;
+import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
 
 public class App {
@@ -16,29 +15,27 @@ public class App {
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("soft_uni");
 
         EntityManager entityManager = factory.createEntityManager();
+//
+//        Department department = new Department("Engineering");
+//
+//        Employee employee = new Employee("Pesho", new Date());
+//        employee.setDepartment(department);
+//
+//        inTransaction(
+//                entityManager,
+//                () -> entityManager.persist(employee)
+//        );
 
-        Person[] people =
-                {
-                        new Student("Pesho", 3),
-                        new Teacher("Gosho", "Java")
-                };
-
-        entityManager.getTransaction().begin();
-
-        Arrays.stream(people)
-                .forEach(entityManager::persist);
-
-        entityManager.getTransaction().commit();
-
-        CriteriaBuilder builder = entityManager.getCriteriaBuilder();
-
-        CriteriaQuery<Teacher> criteriaQuery =
-                builder.createQuery(Teacher.class);
-
-        criteriaQuery.from(Teacher.class);
-
-        entityManager.createQuery(criteriaQuery)
-                .getResultList()
+        Project project = entityManager.find(Project.class, 36);
+        System.out.println(project.employees);
+        System.out.println(" --- -- -- -- ");
+        project.getEmployees()
                 .forEach(System.out::println);
+    }
+
+    static void inTransaction(EntityManager entityManager, Runnable runnable) {
+        entityManager.getTransaction().begin();
+        runnable.run();
+        entityManager.getTransaction().commit();
     }
 }

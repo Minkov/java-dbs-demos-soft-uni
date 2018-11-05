@@ -969,89 +969,293 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="244" parent="6" name="hibernate_sequence"/>
-    <table id="245" parent="6" name="students"/>
-    <table id="246" parent="6" name="teachers"/>
-    <column id="247" parent="244" name="next_val">
+    <table id="244" parent="6" name="departments"/>
+    <table id="245" parent="6" name="employee"/>
+    <table id="246" parent="6" name="employees"/>
+    <table id="247" parent="6" name="hibernate_sequence"/>
+    <table id="248" parent="6" name="mothers"/>
+    <table id="249" parent="6" name="projects"/>
+    <table id="250" parent="6" name="projects_employees"/>
+    <table id="251" parent="6" name="students"/>
+    <table id="252" parent="6" name="teachers"/>
+    <column id="253" parent="244" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="254" parent="244" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="255" parent="244" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="256" parent="245" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="257" parent="245" name="age">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="258" parent="245" name="name">
+      <Position>3</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="259" parent="245" name="hire_date">
+      <Position>4</Position>
+      <DataType>datetime|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="260" parent="245" name="department_id">
+      <Position>5</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="261" parent="245" name="UK_hafqwjqe2e9bcpgyj6evm52ap">
+      <ColNames>name</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <index id="262" parent="245" name="FKo1uiovdf54iyqrovb6soq8yl6">
+      <ColNames>department_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="263" parent="245" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="264" parent="245" name="UK_hafqwjqe2e9bcpgyj6evm52ap">
+      <ColNames>name</ColNames>
+      <UnderlyingIndexName>UK_hafqwjqe2e9bcpgyj6evm52ap</UnderlyingIndexName>
+    </key>
+    <foreign-key id="265" parent="245" name="FKo1uiovdf54iyqrovb6soq8yl6">
+      <ColNames>department_id</ColNames>
+      <RefSchemaName>soft_uni</RefSchemaName>
+      <RefTableName>departments</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="266" parent="246" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="267" parent="246" name="age">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="268" parent="246" name="name">
+      <Position>3</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="269" parent="246" name="hire_date">
+      <Position>4</Position>
+      <DataType>datetime|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="270" parent="246" name="department_id">
+      <Position>5</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="271" parent="246" name="UK_sd5rcqkto9rwnmx8g16o41af">
+      <ColNames>name</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <index id="272" parent="246" name="FKgy4qe3dnqrm3ktd76sxp7n4c2">
+      <ColNames>department_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="273" parent="246" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="274" parent="246" name="UK_sd5rcqkto9rwnmx8g16o41af">
+      <ColNames>name</ColNames>
+      <UnderlyingIndexName>UK_sd5rcqkto9rwnmx8g16o41af</UnderlyingIndexName>
+    </key>
+    <foreign-key id="275" parent="246" name="FKgy4qe3dnqrm3ktd76sxp7n4c2">
+      <ColNames>department_id</ColNames>
+      <RefSchemaName>soft_uni</RefSchemaName>
+      <RefTableName>departments</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="276" parent="247" name="next_val">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="248" parent="245" name="id">
+    <column id="277" parent="248" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="249" parent="245" name="age">
+    <column id="278" parent="248" name="age">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="250" parent="245" name="name">
+    <column id="279" parent="248" name="name">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="251" parent="245" name="grade">
+    <column id="280" parent="248" name="child_id">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="252" parent="245" name="UK_2ywwufkbld4t2tgs7rqf3c8u4">
+    <index id="281" parent="248" name="UK_a8e1ei91f59ln0ivm8fqregk9">
       <ColNames>name</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="253" parent="245" name="PRIMARY">
+    <key id="282" parent="248" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="254" parent="245" name="UK_2ywwufkbld4t2tgs7rqf3c8u4">
+    <key id="283" parent="248" name="UK_a8e1ei91f59ln0ivm8fqregk9">
       <ColNames>name</ColNames>
-      <UnderlyingIndexName>UK_2ywwufkbld4t2tgs7rqf3c8u4</UnderlyingIndexName>
+      <UnderlyingIndexName>UK_a8e1ei91f59ln0ivm8fqregk9</UnderlyingIndexName>
     </key>
-    <column id="255" parent="246" name="id">
+    <column id="284" parent="249" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="256" parent="246" name="age">
+    <column id="285" parent="249" name="name">
       <Position>2</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="257" parent="246" name="name">
-      <Position>3</Position>
-      <DataType>varchar(50)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="258" parent="246" name="klasen">
-      <Position>4</Position>
-      <DataType>bit(1)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="259" parent="246" name="speciality">
-      <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="260" parent="246" name="UK_bbaju4xbspyfj6kq6ma5vn8ix">
-      <ColNames>name</ColNames>
-      <Unique>1</Unique>
-      <Type>btree</Type>
-    </index>
-    <key id="261" parent="246" name="PRIMARY">
+    <key id="286" parent="249" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="262" parent="246" name="UK_bbaju4xbspyfj6kq6ma5vn8ix">
+    <column id="287" parent="250" name="project_id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="288" parent="250" name="employee_id">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="289" parent="250" name="FKlfpjfjr1uh9ujgrw26t0uuok2">
+      <ColNames>employee_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="290" parent="250" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>project_id
+employee_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="291" parent="250" name="FKp64ctjxm8wvtj591w4djccas0">
+      <ColNames>project_id</ColNames>
+      <RefSchemaName>soft_uni</RefSchemaName>
+      <RefTableName>projects</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="292" parent="250" name="FKlfpjfjr1uh9ujgrw26t0uuok2">
+      <ColNames>employee_id</ColNames>
+      <RefSchemaName>soft_uni</RefSchemaName>
+      <RefTableName>employees</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="293" parent="251" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="294" parent="251" name="age">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="295" parent="251" name="name">
+      <Position>3</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="296" parent="251" name="grade">
+      <Position>4</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="297" parent="251" name="UK_2ywwufkbld4t2tgs7rqf3c8u4">
+      <ColNames>name</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <key id="298" parent="251" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="299" parent="251" name="UK_2ywwufkbld4t2tgs7rqf3c8u4">
+      <ColNames>name</ColNames>
+      <UnderlyingIndexName>UK_2ywwufkbld4t2tgs7rqf3c8u4</UnderlyingIndexName>
+    </key>
+    <column id="300" parent="252" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="301" parent="252" name="age">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="302" parent="252" name="name">
+      <Position>3</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="303" parent="252" name="speciality">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="304" parent="252" name="UK_bbaju4xbspyfj6kq6ma5vn8ix">
+      <ColNames>name</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <key id="305" parent="252" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="306" parent="252" name="UK_bbaju4xbspyfj6kq6ma5vn8ix">
       <ColNames>name</ColNames>
       <UnderlyingIndexName>UK_bbaju4xbspyfj6kq6ma5vn8ix</UnderlyingIndexName>
     </key>
